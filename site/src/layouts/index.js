@@ -18,25 +18,35 @@ class Template extends React.Component {
       <h1
         style={{
           ...scale(1.5),
-          marginBottom: rhythm(1.5),
+          marginBottom: rhythm(0.5),
           marginTop: 0,
           padding: rhythm(1)
         }}
       >
-        HIKE LAKES
+        <Link
+          style={{
+            boxShadow: 'none',
+            textDecoration: 'none',
+            color: 'inherit',
+          }}
+          to={'/'}
+        >
+          Hike Lakes
+          </Link>
+
+
+        <Link to={'/blog/'}>
+          Blog
+        </Link>
       </h1>
     )
 
     return (
       <div style={{ backgroundColor: 'white' }} >
         {header}
-        <div style={{
-          marginLeft: 'auto',
-          marginRight: 'auto',
-          maxWidth: rhythm(24)
-        }}>
-          {children()}
-        </div>
+
+        {children()}
+
       </div>
     )
   }
